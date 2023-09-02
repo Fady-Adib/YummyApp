@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yummy</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="overflow-hidden ">
+    <div class="vh-100 position-fixed w-100 bg-black justify-content-center align-items-center z-2 loaderDiv">
+        <span class="loader"></span>
+    </div>
+    <nav class=" position-fixed vh-100 z-3">
+        <div class="container-fluid h-100  px-0">
+            <div class="d-flex h-100 overflow-hidden ">
+                <div class=" d-flex flex-column px-4 py-3  justify-content-between navbar1">
+                    <div class="d-flex flex-column overflow-hidden">
+                        <a href="#search" class="text-white text-decoration-none mb-4 navLink" id="searchTab">Search</a>
+                        <a href="#categories" class="text-white text-decoration-none mb-4 navLink"
+                            id="categoriesTab">Categories</a>
+                        <a href="#area" class="text-white text-decoration-none mb-4 navLink" id="areaTab">Area</a>
+                        <a href="#ingredients" class="text-white text-decoration-none mb-4 navLink"
+                            id="ingredientsTab">Ingredients</a>
+                        <a href="#contactUs" class="text-white text-decoration-none mb-4 navLink"
+                            id="contactUsTab">Contact Us</a>
+                    </div>
+                    <div>
+                        <a href="" class="text-white text-decoration-none me-3"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="" class="text-white text-decoration-none me-3"><i class="fa-solid fa-globe"></i></a>
+                        <a href="" class="text-white text-decoration-none me-3"><i class="fa-brands fa-twitter"></i></a>
+                        <p class="text-white py-3 ">Copyright Â© 2019 All Rights
+                            Reserved.</p>
+                    </div>
+                </div>
+                <div class="px-2 py-3 d-flex flex-column justify-content-between align-items-center bg-white navbar2 ">
+                    <img src="images/yummy-low-resolution-logo-color-on-transparent-background.png" alt="logo"
+                        class="img-fluid">
+                    <button class="btn p-0 fs-4" id="closeBtn"><i class="fa-solid fa-bars fa-2xl"></i></button>
+                    <div>
+                        <a href="" class="text-black text-decoration-none d-block"><i
+                                class="fa-solid fa-share-nodes"></i></a>
+                        <a href="" class="text-black text-decoration-none d-block"><i class="fa-solid fa-globe"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+    <section class="display py-5 position-relative" id="display">
+        <div class="container">
+            <section class="row g-4 " id="home"></section>
+            <section class="mealInstruction row position-relative d-none" id="mealInstruction"></section>
+            <section id="search" class="d-none ">
+                <div class="row">
+                    <div class="col-6"><input type="text" placeholder="Search by Name"
+                            class="form-control   bg-transparent text-white" id="searchByName" search-type="s"></div>
+                    <div class="col-6"><input type="text" placeholder="Search by Letter"
+                            class="form-control  bg-transparent text-white" id="searchByLetter" search-type="f"
+                            maxlength="1"></div>
+                </div>
+                <div class="row g-4 py-5" id="displaySearch">
+                </div>
+            </section>
+            <section id="categories" class="d-none row g-4"></section>
+            <section id="area" class="d-none row g-4"></section>
+            <section id="ingredients" class="d-none row g-4"></section>
+            <section id="displayByFilter" class="d-none row g-4"></section>
+            <section id="contactUs" class="d-none row g-4">
+                <div class="col-md-12 text-center mb-4">
+                    <h2 class="text-white">ContactUs</h2>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control mb-2" placeholder="Enter Your Name" id="name">
+                    <span class="text-danger d-none">Special characters and numbers not allowed</span>
+                </div>
+                <div class="col-md-6">
+                    <input type="email" class="form-control mb-2" placeholder="Enter Your Email" id="email">
+                    <span class="text-danger d-none">Email not valid *example@yyy.zzz</span>
+                </div>
+                <div class="col-md-6">
+                    <input type="number" class="form-control mb-2" placeholder="Enter Your Phone" id="phone">
+                    <span class="text-danger d-none">Enter valid Phone Number</span>
+                </div>
+                <div class="col-md-6">
+                    <input type="number" class="form-control mb-2" placeholder="Enter Your Age" id="age">
+                    <span class="text-danger d-none">Enter valid age *example from 12 to 99</span>
+                </div>
+                <div class="col-md-6">
+                    <input type="password" class="form-control mb-2" placeholder="Enter Your Password" id="passWord">
+                    <span class="text-danger d-none">A password must be at least eight characters, including at least
+                        one number and includes both lower and uppercase
+                        letters and special characters, for example #, ?, !</span>
+                </div>
+                <div class="col-md-6">
+                    <input type="password" class="form-control mb-2" placeholder="Repeat Your Password" id="rePassWord">
+                    <span class="text-danger d-none">Enter valid repassword</span>
+                </div>
+                <div class="col-md-12 text-center"><button class="btn btn-outline-danger text-w " disabled
+                        id="submitBtn">Submit</button>
+                </div>
+            </section>
+        </div>
+    </section>
+
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="main.js" type="module"></script>
+
+</body>
+
+</html>
